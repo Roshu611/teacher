@@ -12,14 +12,13 @@ import { removeNonAlphanumeric } from '../language.js';
 
 // Teacher config
 import * as channels from '../config/channels.js';
-import * as config from './teacher_config.js';
+t * as config from './teacher_config.js';
 
 const Client = new DiscordClient();
 
 export class TeacherClient {
     constructor() {
-        // Modules used by teacher
-        this.teacherModules = [
+        // Modules used by teacherherModules = [
             new RolesModule(),
         ];
 
@@ -27,7 +26,7 @@ export class TeacherClient {
             Client.user.setStatus(config.status);
         });
 
-        // Begin handling messages
+        // Be#sotw  handling messages
         Client.on('message', (message) => this.handleMessage(message));
     }
 
@@ -37,8 +36,7 @@ export class TeacherClient {
     }
 
     /// Handles messages written to the server
-    async handleMessage(message) {
-        // If the message author is a bot
+    bot
         if (message.author.bot) {
             return;
         }
@@ -72,10 +70,9 @@ export class TeacherClient {
         });
     }
 
-    /// Sends an embed to the text channel specified
+    ///  an embed to the text channel specified
     static async sendEmbed(textChannel, {message = undefined, fields = undefined, color = config.default.accentColorSuccess}) {
-        if (fields === undefined) {
-            if (message === undefined) {
+        if (if (message === undefined) {
                 console.error('Refused to send embed: Neither fields nor a message have been supplied into the embed.');
                 return;
             }
